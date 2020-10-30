@@ -1,0 +1,64 @@
+ /*Todo el documento tiene*/
+ 
+ * {
+     background-color: lightgrey;
+     color: grey;
+     font-family: cursive;
+ }
+ /*El encabezado*/
+ 
+ h1 {
+     font-family: sans-serif;
+     text-align: center;
+     text-transform: uppercase;
+ }
+ /*Todos los párrafos*/
+ 
+ a {
+     color: blue;
+     background-color: none;
+ }
+ 
+ p {
+     margin: 50px;
+     border-left-style: solid;
+     border-right-style: solid;
+     border-width: 10px;
+ }
+ /*El párrafo cita*/
+ 
+ .cita {
+     border-bottom-style: none;
+     border-top-style: solid;
+     margin-bottom: 0px;
+     padding: 30px 30px 5px;
+     text-align: justify;
+ }
+ /*El párrafo autor*/
+ 
+ .autor {
+     border-bottom-style: solid;
+     border-top-style: none;
+     font-family: serif;
+     margin-top: 0px;
+     padding: 0px 30px 30px;
+     text-align: center;
+ }
+ /*El párrafo del filósofo*/
+ 
+ #filosofo {
+     background-color: #FFE5E9;
+     border-color: #FFC0CB;
+ }
+ /*El párrafo del pintor*/
+ 
+ #pintor {
+     background-color: #A6EDDB;
+     border-color: #00CC99;
+ }
+ /*El párrafo del escritor*/
+ 
+ #escritor {
+     background-color: #C2DAF3;
+     border-color: #0066CC;
+ }

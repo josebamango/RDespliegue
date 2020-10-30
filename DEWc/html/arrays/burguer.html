@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>Document</title>
+    <script src="burguer.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <p class="display-4 text-center bg-primary text-white rounded">HAMBURGUESERÍA SPORTING</p>
+                <form action=" " method="POST " class="border border-primary p-2 mb-5 rounded">
+                    <legend class="text-center header text-danger bg-dark ">Elige el tipo de carne</legend>
+                    <fieldseet class="form-group form-inline ml-5 mt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="kobe" id="kobe" value="kobe">
+                            <label class="form-check-label" for="kobe"> Carne de Kobe</label>
+                        </div>
+                        <div class="form-check ml-2">
+                            <input class="form-check-input" type="radio" name="novilla" id="novilla" value="novilla">
+                            <label class="form-check-label" for="novilla"> Carne de novilla</label>
+                        </div>
+                        <div class="form-check ml-2">
+                            <input class="form-check-input" type="radio" name="pollo" id="pollo" value="pollo">
+                            <label class="form-check-label" for="pollo"> Carne de pollo</label>
+                        </div>
+                        <div class="form-group mt-4">
+                            <label class="form-check-label" for="precioCarne"> Precio:</label>
+                            <input class="form-control ml-5" type="number" name="precio" id="precioCarne" value="precioCarse" readonly>
+                        </div>
+                    </fieldseet>
+
+                    <legend class="text-center header text-info bg-dark">Elige tus ingredientes</legend>
+                    <fieldest class="form-group form-inline ml-5 mt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="bacon" id="bacon" value="bacon">
+                            <label class="form-check-label" for="pollo">Con bacon</label>
+                        </div>
+                        <div class="form-check ml-2">
+                            <input class="form-check-input" type="checkbox" name="queso" id="queso" value="queso">
+                            <label class="form-check-label" for="pollo">Con queso</label>
+                        </div>
+                        <div class="form-check ml-2">
+                            <input class="form-check-input" type="checkbox" name="tortilla" id="tortilla" value="tortilla">
+                            <label class="form-check-label" for="pollo">Con tortilla</label>
+                        </div>
+                        <div class="form-check ml-2">
+                            <input class="form-check-input" type="checkbox" name="lomo" id="lomo" value="lomo">
+                            <label class="form-check-label" for="pollo">Con lomo</label>
+                        </div>
+                        <div class="form-group mt-4 ml-2">
+                            <label class="form-check-label" for="precioIngredientes"> Precio:</label>
+                            <input class="form-control ml-5" type="number" name="precio" id="precioIngredientes" value="precioIngredientes" readonly>
+                        </div>
+                    </fieldest>
+                    <legend class="text-center header text-success bg-dark">Elige tu pan</legend>
+                    <fieldset form-group form-inline ml-5 mt-3>
+                        <div class="form-group">
+                            <label for="habitaciones">Nuestros panes:</label>
+                            <select name="tipoPan" id="tipoPan" class="form-control">
+                                        <option value="1">Pan Integral</option>
+                                        <option value="2">Pan sin gluten</option>
+                                        <option value="3">Pan de sésamo</option>
+                                        <option value="4">Pan de pipas</option>
+                                    </select>
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        <label for="precio">Precio total:</label>
+                        <input type="number" id="total" size="60px" class="form-control" readonly></input>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q' crossorigin='anonymous'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous'></script>
+
+</html>
