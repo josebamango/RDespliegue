@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div#body {
+            margin: auto auto auto auto;
+            width: 710px;
+        }
+        
+        div#header {
+            margin: 10px auto 10px auto;
+            width: 710px;
+            border: solid 3px blue;
+            border-radius: 20px;
+        }
+        
+        #pie {
+            clear: right;
+            border: solid 3px green;
+            border-radius: 20px;
+        }
+        
+        div#sidebar {
+            display: none;
+            border: solid 1px #ccc;
+            float: right;
+            margin-bottom: 10px;
+        }
+        
+        body.main-sidebar div#main,
+        body.sidebar-main div#main {
+            width: 490px;
+        }
+        
+        body.main-sidebar div#sidebar,
+        body.sidebar-main div#sidebar {
+            display: block;
+            width: 200px;
+            border: solid 1px #ccc;
+        }
+        
+        body.main-sidebar div#main,
+        body.main-sidebar div#sidebar {
+            float: left;
+            border: solid 1px #ccc;
+        }
+        
+        body.sidebar-main div#main,
+        body.sidebar-main div#sidebar {
+            float: right;
+            border: dotted 2px green;
+        }
+    </style>
+</head>
+
+<body class="sidebar-main">
+    <div id="header">Cabecera. RESTAURANTE: El Muslito</div>
+    <div id="body">
+        <div id="main">Este restaurante es una de las referencias gastronómicas de esta zona...</div>
+        <div id="sidebar">Menú Principal</div>
+        <div id="pie">Pie de pagina</div>
+    </div>
+</body>
+
+</html>

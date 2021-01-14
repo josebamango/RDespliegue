@@ -1,0 +1,51 @@
+body {
+    background: green;
+    color: blue;
+    text-align: center;
+}
+
+.contenido {
+    font-size: 60px;
+    width: 600px;
+    height: 400px;
+    background: white;
+    color: blue;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    background-image: url(noel.jpg);
+    z-index: 1;
+}
+
+div {
+    background: red;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+    font-size: 120px;
+}
+
+.izq_top {
+    position: absolute;
+    margin-left: -100px;
+    margin-top: -150px;
+}
+
+.izq_down {
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 250px;
+}
+
+.dcha_top {
+    position: absolute;
+    margin-left: 550px;
+    margin-top: -150px;
+}
+
+.dcha_down {
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 250px;
+}

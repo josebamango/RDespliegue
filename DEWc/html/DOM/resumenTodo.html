@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Titulo de la WEB</title>
+    <meta charset="UTF-8">
+    <meta name="title" content="Titulo de la WEB">
+    <meta name="description" content="Descripción de la WEB">
+    <link href="http://dominio.com/hoja-de-estilos.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <h1>Titulo de la WEB</h1>
+    </header>
+    <nav>
+        <a href="http://dominio.com/seccion2.html">IR SECCION 2</a>
+        <a href="http://dominio.com/seccion2.html">IR SECCION 3</a>
+    </nav>
+    <section>
+        <article>
+            <h2>CONTENIDO PRINCIPAL</h2>
+            <p>Este es el contenido principal de mi web</p>
+            <div>
+                <p>Aqui teneis una imagen.</p>
+                <img src="OIP.JPG" alt="logotipo">
+            </div>
+        </article>
+    </section>
+    <aside>
+        <h3>Banner de publicidad</h3>
+        <a href="http://dominio-externo.com">
+            <img src="banner.jpg">
+        </a>
+        <h3>Testimonios</h3>
+        <p>Me gusta mucho esta pagina.</p>
+    </aside>
+    <footer>
+        <h4>Avisos legales</h4>
+        <a href="http://dominio.com/aviso-legal">Politica de cookies</a>
+        <h4>Redes sociales</h4>
+        <a href="http://facebook.com/mi-pagina-de-facebook">Mi Facebook</a>
+    </footer>
+
+</body>
+<script>
+    addEventListener('load', inicio, false);
+
+    function inicio() {
+        var nodoHtml = document.documentElement;
+        alert(`Nombre: ${nodoHtml.nodeName}, Tipo de nodo: ${nodoHtml.nodeType}, Valor: ${nodoHtml.nodeValue}`);
+        alert(`¿Tiene hijos? -> ${nodoHtml.hasChildNodes()}  Numero de hijos: ${nodoHtml.children.length}`);
+
+        for (var i = 0; i < nodoHtml.childNodes.length; i++) {
+            alert(`Nombre: ${nodoHtml.childNodes[i].nodeName}, Tipo de nodo: ${nodoHtml.childNodes[i].nodeType}, 
+            Valor: ${nodoHtml.childNodes[i].nodeValue}`);
+        }
+
+        var nodoBody = document.body;
+        var aux = "";
+        if (nodoBody.hasChildNodes) {
+            for (var i = 0; i < nodoBody.children; i++) {
+                aux = aux + ` Nombre: ${nodoBody.children[i].nodeName}, Tipo de nodo: ${nodoBody.children[i].nodeType}`;
+            }
+        }
+        alert(aux);
+
+        /*  var nodoFooter = nodoBody.lastElementChild - 1;
+         if (nodoFooter.hasChildNodes()) {
+             var ax = "";
+             var nodos = nodoFooter.getElementsByTagName("a");
+             alert(`Tiene ${nodos.length} enlaces.`);
+
+             for (var i = 0; i < nodos.length; i++) {
+                 ax = ax + `Tipo de nodo: ${nodos[i].nodeType}`;
+             }
+             alert(ax);
+         } */
+
+        var nodoLogo = nodoBody.children[2].children[0].children[2].children[1];
+        var nodoPadre = nodoLogo.parentElement;
+        alert(`Tipo del nodo padre de la imagen: ${nodoPadre.nodeType}. Name: ${nodoPadre.nodeName}`);
+
+        var siguienteHermano = document.getElementsByTagName("h2");
+        console.log(siguienteHermano[0].nextElementSibling);
+
+        var nodoAside = nodoBody.children[3];
+        var anteriorHermano = nodoAside.previousElementSibling;
+        console.log(anteriorHermano);
+
+        console.log(nodoBody.lastElementChild);
+
+        var t1 = nodoAside.querySelectorAll("h3");
+        console.log(t1[0]);
+        console.log(t1[1]);
+
+        var nodoArticle = nodoBody.children[2].children[0].children[1];
+        if (nodoArticle.hasAttributes()) {
+            alert('Si tiene ');
+        } else {
+            alert('No tiene ');
+        }
+
+        nodoArticle.setAttribute("class", "perro");
+        nodoArticle.setAttribute("id", "zorro");
+    }
+</script>
+
+</html>

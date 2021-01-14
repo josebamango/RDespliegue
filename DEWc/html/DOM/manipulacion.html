@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Poner un enlace dentro de un párrafo</title>
+</head>
+
+<body>
+
+    <input type="button" name="boton" id="boton" value="Click!"><br><br>
+
+    <section id="original">
+        <br><a href="#">Enlace 1</a>
+        <a href="#">Enlace 2</a>
+        <a href="#">Enlace 3</a><br>
+    </section><br>
+    <input type="button" name="clonar" id="clonar" value="Clonar!"> <br><br>
+
+    <section id="equipos">
+        <img height="150px" id="blazers" src="blazers.jpg" alt="">
+        <img height="150px" id="celtics" src="celtics.jpg" alt="">
+        <img height="150px" id="heat" src="heat.jpg" alt="">
+        <img height="150px" id="lakers" src="lakers.jpg" alt="">
+        <img height="150px" id="nets" src="nets.jpg" alt="">
+    </section><br>
+
+    <label for="logo">Nombre del logo:</label>
+    <input type="text" name="logo" id="logo">
+    <input type="button" name="borrar" id="borrar" value="Eliminar equipo"> <br> <br>
+    <input type="button" name="lento" id="lento" value="Borrado lento"> <br>
+    <input type="button" name="total" id="total" value="Borrado total"> <br>
+
+    <label for="texto">Introduce los datos:</label>
+    <input type="text" name="datos" id="datos">
+    <input type="button" name="añadir" id="añadir" value="Añadir">
+    <script>
+        addEventListener('load', inicio, false);
+        var contador = 0;
+
+        function inicio() {
+
+            var boton = document.getElementById('boton');
+            var clonar = document.getElementById('clonar');
+            var borrar = document.getElementById('borrar');
+            var lento = document.getElementById('lento');
+            var total = document.getElementById('total');
+            var punto = document.getElementById('punto');
+            var equipos = document.getElementById('equipos');
+            var logo = document.getElementById('logo');
+            var datos = document.getElementById('datos');
+            var añadir = document.getElementById('añadir');
+            boton.addEventListener('click', function() {
+                contador++;
+                var p = document.createElement('p');
+                var texto = document.createTextNode('Párrafo ' + contador);
+                p.appendChild(texto);
+                document.body.appendChild(p);
+            }, false);
+
+            clonar.addEventListener('click', function() {
+                var original = document.getElementById('original');
+                var copia = original.cloneNode(true);
+                document.body.appendChild(copia);
+            }, false);
+
+            borrar.addEventListener('click', function() {
+                for (i = 0; i < equipos.children.length; i++) {
+                    if (equipos.children[i].getAttribute("id") == logo.value) {
+                        equipos.removeChild(equipos.children[i]);
+                    }
+                };
+            }, false);
+
+            lento.addEventListener('click', function() {
+                if (equipos.children.length != 0) {
+                    equipos.removeChild(equipos.children[0])
+                } else {
+                    var aviso = document.createElement("p");
+                    var texto = document.createTextNode("Ya estan todas las vainas borradas");
+                    aviso.appendChild(texto);
+                    document.body.appendChild(aviso);
+                }
+            }, false);
+
+            total.addEventListener('click', function() {
+                do {
+                    equipos.removeChild(equipos.children[0])
+                } while (equipos.children.length != 0);
+                var aviso = document.createElement("p");
+                var texto = document.createTextNode("Ya estan todas las vainas borradas");
+                aviso.appendChild(texto);
+                document.body.appendChild(aviso);
+            }, false);
+
+
+        }
+    </script>
+
+</body>
+
+</html>
